@@ -19,9 +19,24 @@
     <h1 >
     come!!
     <?php
+        $conn = mysqli_init();
+            mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
+            if (mysqli_connect_errno($conn))
+            {
+                die('Failed to connect to MySQL: '.mysqli_connect_error());
+            }
+
         $A = $_GET['A'];
         $B = $_GET['B'];
+        $C = $A+$B;
         echo $A+$B;
+        $sql = "INSERT INTO abc (A , B , C) VALUES ('$A', '$B', '$C')";
+        if (mysqli_query($conn, $sql)) {
+        echo ('<div class="container"><h1 class="display-1">OK!!</h1></div>');
+        } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+        
     ?>
     </h1>
 </body>
