@@ -60,9 +60,9 @@ $res = mysqli_query($conn, 'SELECT * FROM abc');
 <?php while($Result = mysqli_fetch_array($res))
 {?>
     <tr>
-      <td><?php echo $Result['A'];?></td>
-      <td><?php echo $Result['B'];?></td>
-      <td><?php echo $Result['C'];?></td>
+      <td align="center"><?php echo $Result['A'];?></td>
+      <td align="center"><?php echo $Result['B'];?></td>
+      <td align="center"><?php echo $Result['C'];?></td>
     </tr>
 <?php
 }
