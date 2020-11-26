@@ -29,15 +29,11 @@
         $B = $_GET['B'];
         $C = $A+$B;
    
-        $sql = "INSERT INTO abc (A , B , C) VALUES ('$A', '$B', '$C')";
-        if (mysqli_query($conn, $sql)) 
-        {
-            header("location:show.php");
-        } 
-        else 
-        {
-            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+        if (mysqli_query($conn, $sql)) {
+    header("location:show.php");
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
         
   
         mysqli_close($conn);
