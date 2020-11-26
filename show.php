@@ -21,8 +21,7 @@
     <?php
         $A = $_GET['A'];
         $B = $_GET['B'];
-        echo $A;
-        echo $B;
+        echo $A+$B;
     ?>
     </h1>
 </body>
