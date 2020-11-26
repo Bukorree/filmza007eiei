@@ -17,7 +17,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>     
     
     <h1 >
-    come!!
     <?php
         $conn = mysqli_init();
             mysqli_real_connect($conn, 'databaselabitf.mysql.database.azure.com', 'filmzz@databaselabitf', 'film8844@', 'filmDATAB', 3306);
@@ -29,13 +28,18 @@
         $A = $_GET['A'];
         $B = $_GET['B'];
         $C = $A+$B;
-        echo $A+$B;
+   
         $sql = "INSERT INTO abc (A , B , C) VALUES ('$A', '$B', '$C')";
         if (mysqli_query($conn, $sql)) {
-        echo ('<div class="container"><h1 class="display-1">OK!!</h1></div>');
+            header("location:show.php");
+ 
         } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+        }
+        
+  }
+  
+mysqli_close($conn);
         
     ?>
     </h1>
