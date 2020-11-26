@@ -50,9 +50,9 @@ $res = mysqli_query($conn, 'SELECT * FROM abc');
 <table class="table table-bordered">
   <thead>
     <tr class="bg-success">
-      <th width="50"> <div align="center">A</div></th>
-      <th width="500"> <div align="center">B </div></th>
-      <th width="100"> <div align="center">C </div></th>
+      <th> <div align="center">A</div></th>
+      <th> <div align="center">B </div></th>
+      <th> <div align="center">C </div></th>
     </tr>
   </thead>
   
