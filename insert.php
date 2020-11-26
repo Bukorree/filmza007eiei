@@ -28,6 +28,7 @@
         $A = $_GET['A'];
         $B = $_GET['B'];
         $C = $A+$B;
+        $sql = "INSERT INTO abc (A , B , C) VALUES ('$A', '$B', '$C')";
    
         if (mysqli_query($conn, $sql)) {
     header("location:show.php");
